@@ -1,5 +1,5 @@
 n,m=map(int,input().split())
-def MCD(n,m):
+def GCD(n,m):
     if n>=m:
         B=n
         S=m
@@ -9,4 +9,4 @@ def MCD(n,m):
     while S != 0:
         [B, S]= [S, B%S]
     return B
-print(MCD(n,m))
+print(GCD(n,m))
