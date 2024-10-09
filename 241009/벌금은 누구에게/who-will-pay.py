@@ -6,5 +6,6 @@ for _ in range(m):
     score[s-1]-=1
     if score[s-1]==0:
         ans=s
-    
+        break
+        
 print(ans)
