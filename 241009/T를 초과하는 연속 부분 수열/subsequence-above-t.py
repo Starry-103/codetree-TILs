@@ -6,8 +6,9 @@ ans, cnt = 0, 0
 for i in range(n):
     if i>=1 and i>t:
         cnt+=1
-    else:
+    elif i>=1 and i<=t:
         cnt=0
+    
     ans=max(ans, cnt)
 
 print(ans)
