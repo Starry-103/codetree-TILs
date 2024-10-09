@@ -1,5 +1,5 @@
 n, m, k = map(int, input().split())
-score=[k for _ in range(n)]
+score=[k]*n
 ans=-1
 for _ in range(m):
     s=int(input())
