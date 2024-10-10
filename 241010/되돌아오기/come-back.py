@@ -20,6 +20,8 @@ for _ in range(n):
         cnt+=1
         if x==0 and y==0:
             ans=cnt
-            break
+        
+    if ans != -1:
+        break
 
 print(ans)
