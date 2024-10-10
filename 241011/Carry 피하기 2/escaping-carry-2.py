@@ -1,13 +1,7 @@
-n=int(input())
-#carry가 있는지 판단 방법? 흠...
-#3개의 숫자를 고르는 방법: 3중 for문?
-#각각 더해본 후 carry 유무 판단 => 없을 시에 max_ans와 크기를 비교하여 최댓값 갱신
-#==> print(max_ans)
-max_ans=-1
-nums=[
-    int(input())
-    for _ in range(n)
-]
+n = int(input())
+nums = [int(input()) for _ in range(n)]
+max_ans = -1
+
 def has_no_carry(x, y, z):
     # 각 숫자를 문자열로 변환한 후, 자릿수를 맞춰줌
     max_len = max(len(str(x)), len(str(y)), len(str(z)))
@@ -22,11 +16,12 @@ def has_no_carry(x, y, z):
             return False  # carry 발생
     return True  # carry 발생 안 함
 
-for a in nums:
-    for b in nums:
-        for c in nums:
-            if has_no_carry(a,b,c):
-                sum=a+b+c
-                max_ans=max(max_ans, sum)
+# 중복 없이 3개의 숫자 고르기 (i < j < k 조건을 이용)
+for i in range(n):
+    for j in range(i + 1, n):
+        for k in range(j + 1, n):
+            if has_no_carry(nums[i], nums[j], nums[k]):
+                sum_value = nums[i] + nums[j] + nums[k]
+                max_ans = max(max_ans, sum_value)
 
 print(max_ans)
