@@ -16,7 +16,6 @@ for m in move_dir:
     cnt+=1
     if x==0 and y==0:
         ans=cnt
-    if ans != -1:
         break
 
 print(ans)
