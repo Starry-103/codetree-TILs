@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+m, n = map(int, input().split())
 #0=오른쪽, 시계방향 회전
 dxs=[0, 1, 0, -1]
 dys=[1, 0, -1, 0]
