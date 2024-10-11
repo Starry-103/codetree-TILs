@@ -1,4 +1,4 @@
-import math
+from math import prod
 from itertools import combinations
 n=int(input())
 pos=[]
